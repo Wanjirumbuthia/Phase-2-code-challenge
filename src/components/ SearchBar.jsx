@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
-function  SearchBar(transactions,onFilter) {
+function  SearchBar({transactions,onFilter}) {
     const [search, addSearch] = useState("");
 
    
@@ -28,15 +28,17 @@ function  SearchBar(transactions,onFilter) {
         The Royal Bank of Flatiron
         </header>
         <input
-        className="search-input"
+        id="search-input"
         type="text"
         placeholder="Search Recent Transactions"
         value={search} 
         onChange={InputChange} 
        />
-        <span className="search-icon" onClick={handleSearch}>
-        &#128269;
+        
+        <span id="search-icon" onClick={handleSearch}>
+        🔍
       </span>
+      
     </div>
   )
 }
